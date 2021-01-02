@@ -1,5 +1,6 @@
 namespace SpriteKind {
     export const aim = SpriteKind.create()
+    export const minimap = SpriteKind.create()
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
@@ -361,7 +362,7 @@ let map = img`
     6...7...5......................6
     6...7...6..7777777777....6666666
     6...1...6..7777777777..........6
-    6...2...6..66666.......7.......6
+    6...2...6..6.666.......7.......6
     6...7...6......6.......4.......6
     6...1...64664666.......7.......6
     6...7..................7.......6
@@ -914,6 +915,41 @@ mySprite = sprites.create(img`
     222222..................222222
     222222..................222222
     `, SpriteKind.aim)
+let mySprite2 = sprites.create(img`
+    66666666666665656663666366666366
+    6ddddddd6dddddddddddddddddddddd6
+    6ddddddd6dddddddddddddddddddddd6
+    6ddd7ddd5dddddddddddddddddddddd6
+    6ddd7ddd6dd7777777777dddd6666666
+    6ddd1ddd6dd7777777777dddddddddd6
+    6ddd2ddd6dd6d666ddddddd7ddddddd6
+    6ddd7ddd6dddddd6ddddddd4ddddddd6
+    6ddd1ddd64664666ddddddd7ddddddd6
+    6ddd7dddddddddddddddddd7ddddddd6
+    666666666665666566dd665666656666
+    6dddddddddddddddddddddddddddddd6
+    6dddddddddddddddddddddddddddddd6
+    6dddd7777777477777777774777dddd6
+    6dddd6666666666666666666666dddd6
+    6dddd6666266666266666266666dddd6
+    6dddddddddddddddddddddddddddddd6
+    6dddddddddddddddddddddddddddddd6
+    677727777771777717772777ddddddd6
+    6dddddddddddddddddddddddddddddd6
+    6dddddddddddd77777777777ddddddd6
+    6dddddddddd777ddddddddd777777776
+    6dd6dddd7777ddddddddddddddddddd6
+    6dd6dddd6ddddd77777dddd777ddddd6
+    6dd6dddd6ddddd7ddd77ddd7d77dddd6
+    6dd6dddd6ddddd77ddd7dddd7d77dd76
+    6dd6dddd667dddd7ddd7ddd7ddd7dd76
+    6dd6dddddd777dd7ddd77777ddd77776
+    6dd6dddddddd7777ddddddddddddddd6
+    6dddddddddddddddddddddddddddddd6
+    6dddddddddddddddddddddddddddddd6
+    66666666666666666666666666666666
+    `, SpriteKind.minimap)
+mySprite2.setPosition(144, 16)
 game.onUpdate(function () {
     st.updateControls()
 })
